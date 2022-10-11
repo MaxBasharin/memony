@@ -1,0 +1,23 @@
+{
+  "name": "monony",
+  "version": "1.0.0",
+  "description": "приложение для карточного запоминания",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxBasharin/memony.git"
+  },
+  "keywords": [
+    "js",
+    "javascript"
+  ],
+  "author": "Max Basharin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxBasharin/memony/issues"
+  },
+  "homepage": "https://github.com/MaxBasharin/memony#readme"
+}
