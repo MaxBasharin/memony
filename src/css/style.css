@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 1.2;
 	color: #333;
 }
@@ -113,7 +113,7 @@ h6 {
 }
 
 .app {
-	padding-top: 120px;
+	padding-top: 130px;
 	display: flex;
 	justify-content: center;
 }
@@ -124,7 +124,7 @@ h6 {
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 100;
+	z-index: 15;
 	background-color: #fff;
 	box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
 }
@@ -158,7 +158,6 @@ h6 {
 	outline-offset: 0;
 	border: 2px solid #4CAF50;
 	box-shadow: 0px 2px 0px #4CAF50;
-
 }
 
 .header__input::placeholder {
@@ -213,6 +212,7 @@ h6 {
 	position: absolute;
 	top: -60px;
 	left: 50%;
+	z-index: 10;
 	transform: translate(-50%, -50%);
 }
 
@@ -241,4 +241,104 @@ h6 {
 
 .btn-plus:after {
 	transform: rotate(-180deg);
+}
+
+/* Модальный (фон) */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  z-index: 20; /* Сидеть на вершине */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включите прокрутку, если это необходимо */
+  background-color: rgb(0,0,0); /* Цвет запасной вариант */
+  background-color: rgba(0,0,0,0.4); /* Черный с непрозрачностью */
+}
+
+/* Модальное содержание/коробка */
+.modal-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 10;
+	transform: translate(-50%, -50%);
+  background-color: #fff;
+  margin: 15% auto; /* 15% сверху и по центру */
+  padding: 70px 24px 32px;
+  border-radius: 16px;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+}
+
+.modal-content__btn {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+}
+
+/* Кнопка закрытия */
+.close {
+  position: absolute;
+	top: 0;
+	right: 0;
+	
+}
+
+.btn-close {
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	position: relative;
+}
+
+.btn-close:before,
+.btn-close:after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 8px;
+    width: 21px;
+    height: 3px;
+		border-radius: 3px;
+    background: var(--color-woodsmoke);
+}
+
+.btn-close:before {
+	transform: rotate(45deg);
+}
+
+.btn-close:after {
+	transform: rotate(-45deg);
+}
+
+.modal__inner {
+	margin-bottom: 32px;
+}
+
+.modal__input {
+	width: 100%;
+	border: 0;
+	border-bottom: 2px solid #C8C5D1;
+}
+
+.modal__input::placeholder {
+	color: #C8C5D1;
+}
+
+.modal__input:focus {
+	outline: 0;
+	outline-offset: 0;
+	border-bottom: 2px solid #4CAF50;
+}
+
+.modal__btn {
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn-modal {
+	font-size: 16px;
+	padding: 14px 18px;
 }
