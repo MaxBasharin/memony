@@ -185,6 +185,10 @@ h6 {
 	position: relative;
 }
 
+.list__item.active {
+	border: 2px solid #4CAF50;
+}
+
 .list__item-name {
 	font-size: 21px;
 	font-weight: 700;
@@ -266,7 +270,7 @@ h6 {
 	transform: translate(-50%, -50%);
   background-color: #fff;
   margin: 15% auto; /* 15% сверху и по центру */
-  padding: 70px 24px 32px;
+  padding: 70px 24px 24px;
   border-radius: 16px;
   width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
 }
@@ -340,5 +344,5 @@ h6 {
 
 .btn-modal {
 	font-size: 16px;
-	padding: 14px 18px;
+	padding: 12px 16px;
 }
